@@ -1,0 +1,53 @@
+.rating-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.rating-stamp-ring {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-6deg);
+  flex-shrink: 0;
+  background: var(--surface);
+}
+
+.rating-stamp.empty .rating-stamp-ring {
+  border-style: dashed;
+  border-color: var(--line-strong);
+}
+
+.rating-stamp-value {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent-teal-dark);
+  transform: rotate(6deg);
+}
+
+.rating-stamp.empty .rating-stamp-value {
+  color: var(--ink-soft);
+  font-size: 1.1rem;
+}
+
+.rating-stamp-count {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.rating-stamp.compact .rating-stamp-ring {
+  width: 30px;
+  height: 30px;
+  border-width: 1.5px;
+}
+
+.rating-stamp.compact .rating-stamp-value {
+  font-size: 0.75rem;
+}

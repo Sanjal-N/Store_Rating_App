@@ -1,0 +1,88 @@
+.search-bar {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  min-width: 220px;
+}
+
+.search-bar select,
+.sort-direction-btn {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  color: var(--ink-soft);
+}
+
+.sort-direction-btn:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.1rem;
+}
+
+.store-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 1.1rem 1.2rem 1.2rem;
+  position: relative;
+}
+
+/* A dashed perforation across the top, like tearing a stub from a ticket */
+.store-card::before {
+  content: '';
+  display: block;
+  height: 0;
+  border-top: 2px dashed var(--line-strong);
+  margin: 0 -1.2rem 1.1rem;
+}
+
+.store-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.store-card h2 {
+  font-size: 1.05rem;
+  margin: 0 0 0.3rem;
+}
+
+.store-address {
+  color: var(--ink-soft);
+  font-size: 0.83rem;
+  margin: 0;
+}
+
+.my-rating {
+  border-top: 1px solid var(--line);
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.my-rating-label {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}

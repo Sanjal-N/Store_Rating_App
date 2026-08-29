@@ -1,0 +1,97 @@
+.navbar {
+  background: var(--surface);
+  border-bottom: 2px solid var(--ink);
+}
+
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem 0.6rem;
+  max-width: 960px;
+  margin: 0 auto;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+}
+
+.navbar-mark {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  letter-spacing: 0.03em;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.navbar-user-name {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.navbar-user-role {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-teal-dark);
+}
+
+.navbar-user button {
+  background: none;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 0.3rem 0.65rem;
+  font-size: 0.8rem;
+  color: var(--ink);
+}
+
+.navbar-user button:hover {
+  background: var(--canvas);
+  border-color: var(--ink);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.4rem;
+  font-size: 0.85rem;
+  padding: 0.55rem 1.25rem;
+  max-width: 960px;
+  margin: 0 auto;
+  border-top: 1px solid var(--line);
+}
+
+.navbar-links a {
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: var(--accent-teal-dark);
+  text-decoration: none;
+}
+
+@media (max-width: 640px) {
+  .navbar-links {
+    flex-wrap: wrap;
+    gap: 0.9rem 1.1rem;
+  }
+}

@@ -1,0 +1,145 @@
+/* ---------------------------------------------------------------
+   Design tokens
+   A ledger/ticket system: ratings are entries in a record book.
+   Ink on parchment, a stamped rating mark, hairline rules instead
+   of boxed cards wherever the content is tabular.
+------------------------------------------------------------------ */
+:root {
+  --ink: #1b2e2a;
+  --ink-soft: #4a5a53;
+  --canvas: #e8e4d8;
+  --surface: #fbf9f3;
+  --line: #c9c2ac;
+  --line-strong: #a89f83;
+  --accent-gold: #b8863a;
+  --accent-gold-soft: #e3c48f;
+  --accent-teal: #2f6f62;
+  --accent-teal-dark: #204d43;
+  --danger: #9b3b34;
+  --danger-bg: #f6e9e7;
+  --success: #3f6b45;
+  --success-bg: #eaf1e7;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
+
+  --radius: 3px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--canvas);
+  background-image: radial-gradient(circle at 1px 1px, rgba(27, 46, 42, 0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+  color: var(--ink);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 1.9rem;
+  margin: 0 0 1.25rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.9rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+a {
+  color: var(--accent-teal-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-teal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3.5rem;
+}
+
+.page-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.page-status {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  font-style: italic;
+}
+
+.form-error {
+  background: var(--danger-bg);
+  border-left: 3px solid var(--danger);
+  color: var(--danger);
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.form-success {
+  background: var(--success-bg);
+  border-left: 3px solid var(--success);
+  color: var(--success);
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.btn-link {
+  background: var(--accent-teal);
+  color: var(--surface);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.btn-link:hover {
+  background: var(--accent-teal-dark);
+  text-decoration: none;
+}

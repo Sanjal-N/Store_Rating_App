@@ -1,0 +1,89 @@
+.filter-bar {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: 0.87rem;
+  font-family: var(--font-body);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.data-table thead th {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  font-weight: 500;
+  border-bottom: 2px solid var(--ink);
+}
+
+.mono-cell {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.sortable-th {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.sortable-th:hover {
+  color: var(--accent-teal-dark);
+}
+
+.data-table tbody tr:hover {
+  background: rgba(47, 111, 98, 0.05);
+}
+
+.role-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+.role-admin {
+  color: var(--accent-teal-dark);
+}
+
+.role-user {
+  color: var(--ink-soft);
+}
+
+.role-store_owner {
+  color: var(--accent-gold);
+}
+
+@media (max-width: 640px) {
+  .data-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

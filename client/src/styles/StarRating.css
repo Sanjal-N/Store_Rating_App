@@ -1,0 +1,46 @@
+.punch-strip {
+  display: inline-flex;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+  width: fit-content;
+}
+
+.punch-strip .punch {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-right: 1px dashed var(--line-strong);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.12s ease, color 0.12s ease;
+}
+
+.punch-strip .punch:last-child {
+  border-right: none;
+}
+
+.punch-strip .punch.filled {
+  background: var(--accent-gold);
+  color: var(--surface);
+  font-weight: 600;
+}
+
+.punch-strip .punch:not(:disabled):hover {
+  background: var(--accent-gold-soft);
+  color: var(--ink);
+}
+
+.punch-strip .punch.filled:not(:disabled):hover {
+  background: var(--accent-gold);
+  color: var(--surface);
+}
+
+.punch-strip.disabled .punch {
+  cursor: default;
+}
